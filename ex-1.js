@@ -14,3 +14,14 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+// async function getData () {
+//   const johnProfile = await getJohnProfile();
+//   console.log(johnProfile)
+// }
+function onSuccess(data) {
+  console.log(data)
+}
+function onFailed (data) {
+  console.log(data)
+}
+getJohnProfile().then(onSuccess).catch(onFailed)

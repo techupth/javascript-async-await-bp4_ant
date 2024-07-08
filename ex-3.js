@@ -33,3 +33,20 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+// async function getData() {
+//   try{
+//     const johnProfile = await getJohnProfile();
+//     console.log(johnProfile);
+//     const johnOrders = await getJohnOrders();
+//     console.log(johnOrders)
+//   }catch(error) {
+//     console.log(error)
+//   }
+// }
+function onSuccess(data) {
+  console.log(data)
+}
+function onFailed(error) {
+  console.log(error)
+}
+getJohnProfile().then(onSuccess).then(getJohnOrders).then(onSuccess).catch(onFailed)
